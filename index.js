@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.post('/token', async (req, res) => {
   try {
-    const privateKey = process.env.PRIVATE_KEY?.replace(/\\n/g, '\n');
+    const privateKey = process.env.PRIVATE_KEY;
     const clientEmail = process.env.CLIENT_EMAIL;
     const now = Math.floor(Date.now() / 1000);
 
